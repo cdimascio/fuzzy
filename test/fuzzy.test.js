@@ -6,14 +6,14 @@ var fuzzy = fuzzy || require('../lib/fuzzy')
 describe('fuzzy', function(){
   describe('.test', function(){
     it('should return true when fuzzy match', function(){
-      expect(fuzzy.test('back', 'imaback')).to.be.True;
-      expect(fuzzy.test('back', 'bakck')).to.be.True;
-      expect(fuzzy.test('shig', 'osh kosh modkhigow')).to.be.True;
-      expect(fuzzy.test('', 'osh kosh modkhigow')).to.be.True;
+      expect(fuzzy.test('back', 'imaback')).to.be.true;
+      expect(fuzzy.test('back', 'bakck')).to.be.true;
+      expect(fuzzy.test('shig', 'osh kosh modkhigow')).to.be.true;
+      expect(fuzzy.test('', 'osh kosh modkhigow')).to.be.true;
     });
     it('should return false when no fuzzy match', function(){
-      expect(fuzzy.test('back', 'abck')).to.be.False;
-      expect(fuzzy.test('okmgk', 'osh kosh modkhigow')).to.be.False;
+      expect(fuzzy.test('back', 'abck')).to.be.false;
+      expect(fuzzy.test('okmgk', 'osh kosh modkhigow')).to.be.false;
     });
   });
   describe('.simpleFilter', function(){
